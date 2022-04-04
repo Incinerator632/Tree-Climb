@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
         Vector3 spawnPosition = new Vector3();
         for (int i = 0; i < platformCount; i++)
         {
-            spawnPosition.y += Random.Range(5f, 0.5f);
-            spawnPosition.x = Random.Range(-12f, 12f);
+            spawnPosition.y += Random.Range(5.0f, 0.6f);
+            spawnPosition.x = Random.Range(-12.0f, 12.0f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
         }
     }
