@@ -30,5 +30,6 @@ public class Platform : MonoBehaviour
                 player2Rb2d.velocity = velocity;
             }
         }
+        Score.scoreValue += 10;
     }
 }

@@ -1,23 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class OutOfBounds : MonoBehaviour
+public class Score : MonoBehaviour
 {
-    private float bottomLimit = -5;
+    public static int scoreValue = 0;
+    public TextMeshProUGUI score;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z < bottomLimit)
-        {
-            Destroy(gameObject);
-        }
+        score.text = "SCORE: " + scoreValue;
     }
 }

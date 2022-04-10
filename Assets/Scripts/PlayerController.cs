@@ -7,7 +7,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D player2Rb2d;
     private float speed = 10f;
     private float horizontalInput;
-
+    private float yBound = -10;
+    private float xRange = 15;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -15,11 +17,23 @@ public class PlayerController : MonoBehaviour
         player2Rb2d = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (transform.position.y < yBound)
         {
-            Application.Quit();
+            Destroy(gameObject);
+            gameManager.GameOver();
+        }
+
+        if (transform.position.x > xRange)
+        {
+            Destroy(gameObject);
+            gameManager.GameOver();
+        }
+        else if (transform.position.x < -xRange)
+        {
+            Destroy(gameObject);
+            gameManager.GameOver();
         }
     }
 

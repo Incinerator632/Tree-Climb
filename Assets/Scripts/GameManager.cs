@@ -8,18 +8,16 @@ using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject platformPrefab;
     public int platformCount = 300;
+    public GameObject platformPrefab;
     public GameObject titleScreen;
     public GameObject ControlsMenu;
     public Button restartButton;
+    public GameObject pauseScreen;
     public TextMeshProUGUI gameOverText;
     public bool isGameActive = false;
     public bool isGameOver = false;
-    public GameObject pauseScreen;
-    public TextMeshProUGUI scoreText;
     private bool paused;
-    private int score;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +29,6 @@ public class GameManager : MonoBehaviour
             spawnPosition.x = Random.Range(-10.0f, 10.0f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
         }
-
-        score = 0;
-        UpdateScore(0);
     }
 
     // Update is called once per frame
@@ -43,12 +38,6 @@ public class GameManager : MonoBehaviour
         {
             ChangePaused();
         }
-    }
-
-    private void UpdateScore(int scoreToAdd)
-    {
-        score += scoreToAdd;
-        scoreText.text = "Score: " + score;
     }
 
     public void StartGame()
