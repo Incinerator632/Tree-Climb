@@ -15,6 +15,14 @@ public class PlayerController : MonoBehaviour
         player2Rb2d = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
