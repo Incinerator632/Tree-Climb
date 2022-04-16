@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D player2Rb2d;
     private float speed = 10f;
     private float horizontalInput;
-    private float yBound = -10;
     private float xRange = 15;
     private GameManager gameManager;
 
@@ -19,21 +18,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.y < yBound)
+        if (transform.position.x < -xRange)
         {
-            Destroy(gameObject);
-            gameManager.GameOver();
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
 
         if (transform.position.x > xRange)
         {
-            Destroy(gameObject);
-            gameManager.GameOver();
-        }
-        else if (transform.position.x < -xRange)
-        {
-            Destroy(gameObject);
-            gameManager.GameOver();
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
     }
 

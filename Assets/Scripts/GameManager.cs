@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
             spawnPosition.x = Random.Range(-10.0f, 10.0f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
         }
+
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame

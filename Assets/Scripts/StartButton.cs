@@ -18,6 +18,7 @@ public class StartButton : MonoBehaviour
 
     void GameStart()
     {
+        Time.timeScale = 1;
         gameManager.StartGame();
     }
 }
