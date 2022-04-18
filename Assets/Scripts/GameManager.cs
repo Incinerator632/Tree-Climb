@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+
         Vector3 spawnPosition = new Vector3();
         for (int i = 0; i < platformCount; i++)
         {
