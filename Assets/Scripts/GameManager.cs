@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public bool isGameActive = false;
     public bool isGameOver = false;
     private bool paused;
+    private SpawnManager spawnManager;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,10 @@ public class GameManager : MonoBehaviour
     {
         titleScreen.gameObject.SetActive(false);
         isGameActive = true;
+        spawnManager.SpawnPowerUp();
+        spawnManager.SpawnPowerUp2();
+        spawnManager.SpawnPowerUp3();
+        spawnManager.SpawnPowerUp4();
     }
 
     void ChangePaused()
