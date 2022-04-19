@@ -5,4 +5,5 @@ April 9th - Added a pause screen. Added a Controls button on the main menu. Chan
 April 10th - Added a barrier that does not allow the player to pass a certain point. Made the timer count down from two minutes. Made the player accumulate points when hitting platforms. (3 hours)
 April 16th - Made the game start when hitting the start button. Made the sprites for the powerups. (4 hours)
 April 17th - Made a background. Made the buttons highlight when hovered on. (2 hours)
-(29 hours left to go)
+April 18th - Made the prefabs for the powerups. Worked on the code for the powerups. (3 hours)
+(26 hours left to go)
