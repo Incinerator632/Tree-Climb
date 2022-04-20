@@ -55,6 +55,14 @@ public class GameManager : MonoBehaviour
         spawnManager.SpawnPowerUp4();
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GameOver();
+        }
+    }
+
     void ChangePaused()
     {
         if (!paused)
@@ -78,6 +86,7 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         restartButton.Select();
         isGameOver = true;
+        Debug.Log(isGameOver);
     }
 
     public void RestartGame()

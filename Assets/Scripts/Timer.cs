@@ -9,13 +9,6 @@ public class Timer : MonoBehaviour
     public float timeValue = 120f;
     public TextMeshProUGUI timerText;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (timeValue > 0)
@@ -28,6 +21,7 @@ public class Timer : MonoBehaviour
         }
 
         DisplayTime(timeValue);
+
     }
 
     void DisplayTime(float timetoDisplay)
