@@ -86,7 +86,6 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         restartButton.Select();
         isGameOver = true;
-        Debug.Log(isGameOver);
     }
 
     public void RestartGame()

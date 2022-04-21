@@ -13,11 +13,20 @@ public class Score : MonoBehaviour
     void Start()
     {
         score = GetComponent<TextMeshProUGUI>();
+        scoreValue = 0;
+        scoreValue = PlayerPrefs.GetInt("Score");
     }
 
     // Update is called once per frame
     void Update()
     {
         score.text = "SCORE: " + scoreValue;
+        PlayerPrefs.SetInt("Score", scoreValue);
+    }
+
+    void OnDisable()
+    {
+        PlayerPrefs.DeleteKey("Score");
+        PlayerPrefs.Save();
     }
 }

@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private float speed = 10f;
     private float horizontalInput;
     private float xRange = 14;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
-
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)

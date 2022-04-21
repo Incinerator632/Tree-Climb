@@ -3,25 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
     public float timeValue = 120f;
     public TextMeshProUGUI timerText;
+    public UnityEvent onTimerCompleted;
 
     void Update()
     {
-        if (timeValue > 0)
+        if (timeValue > 0f)
         {
             timeValue -= Time.deltaTime;
+
+            if (timeValue <= 0f)
+            {
+                onTimerCompleted?.Invoke();
+                timeValue = 0f;
+            }
         }
-        else
-        {
-            timeValue = 0;
-        }
+            //if (timeValue > 0)
+            //{
+            //timeValue -= Time.deltaTime;
+       // }
+        //else
+        //{
+        //    timeValue = 0;
+        //}
 
         DisplayTime(timeValue);
-
     }
 
     void DisplayTime(float timetoDisplay)
