@@ -7,4 +7,5 @@ April 16th - Made the game start when hitting the start button. Made the sprites
 April 17th - Made a background. Made the buttons highlight when hovered on. (2 hours)
 April 18th - Made the prefabs for the powerups. Worked on the code for the powerups. Made the cursor disappear when starting the game. (3 hours)
 April 19th - Made the game over screen show up when the player dies. Made the restart button take you back to the main menu. (2 hours)
-(24 hours left to go)
+April 21th - Made the platforms disappear after being hit twice. Made the Game Over Menu appear when the timer hits 0:00. Made the score reset after hitting the restart button.(4 hours)
+(20 hours left to go)
