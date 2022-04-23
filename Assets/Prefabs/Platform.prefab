@@ -143,3 +143,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 10
+  hitAmount_Max: 2
+  jumpSound: {fileID: 0}

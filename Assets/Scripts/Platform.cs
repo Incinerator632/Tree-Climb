@@ -7,7 +7,7 @@ public class Platform : MonoBehaviour
     public float jumpForce = 10f;
     public int hitAmount_Max = 2;
     private int hitAmount_Current;
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.relativeVelocity.y <= 0f)
@@ -22,11 +22,11 @@ public class Platform : MonoBehaviour
         }
         Score.scoreValue += 10;
 
-        //hitAmount_Current++;
+        hitAmount_Current++;
 
-        //if (hitAmount_Current >= hitAmount_Max)
+        if (hitAmount_Current >= hitAmount_Max)
         {
-        //    Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

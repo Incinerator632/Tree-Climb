@@ -8,7 +8,9 @@ using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioClip GameOverSound;
     public int platformCount = 300;
+    private AudioSource playerAudio;
     public GameObject platformPrefab;
     public GameObject titleScreen;
     public GameObject ControlsMenu;
@@ -18,7 +20,6 @@ public class GameManager : MonoBehaviour
     public bool isGameActive = false;
     public bool isGameOver = false;
     private bool paused;
-    private SpawnManager spawnManager;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,8 @@ public class GameManager : MonoBehaviour
         }
 
         Time.timeScale = 0;
+
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,10 +52,6 @@ public class GameManager : MonoBehaviour
     {
         titleScreen.gameObject.SetActive(false);
         isGameActive = true;
-        spawnManager.SpawnPowerUp();
-        spawnManager.SpawnPowerUp2();
-        spawnManager.SpawnPowerUp3();
-        spawnManager.SpawnPowerUp4();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -60,6 +59,7 @@ public class GameManager : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameOver();
+            playerAudio.PlayOneShot(GameOverSound, 0.5f);
         }
     }
 

@@ -23,14 +23,14 @@ public class Timer : MonoBehaviour
                 timeValue = 0f;
             }
         }
-            //if (timeValue > 0)
-            //{
-            //timeValue -= Time.deltaTime;
-       // }
-        //else
-        //{
-        //    timeValue = 0;
-        //}
+      //if (timeValue > 0)
+      //{
+          //timeValue -= Time.deltaTime;
+      //}
+          //else
+          //{
+            //timeValue = 0;
+          //}
 
         DisplayTime(timeValue);
     }
