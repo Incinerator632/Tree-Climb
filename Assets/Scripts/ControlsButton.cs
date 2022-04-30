@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class ControlsButton : MonoBehaviour
 {
-    private Button button;
     public GameObject controlPanel;
     public GameObject titleScreen;
     public Button backButton;
+    private Button button;
 
     // Start is called before the first frame update
     void Start()
