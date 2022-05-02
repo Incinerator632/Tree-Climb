@@ -10,4 +10,4 @@ April 19th - Made the game over screen show up when the player dies. Made the re
 April 21st - Made the platforms disappear after being hit twice. Made the Game Over Menu appear when the timer hits 0:00. Made the score reset after hitting the restart button. (4 hours)
 April 23rd - Made the sound effects for when the player bounces off of a platform and when the game over screen shows up. Started to work on the music that will play in the background. (3 hours)
 April 30th - Made it so when the Game Over screen shows up that the timer and the player freeze. Implemented the music that plays in the background. Made the Quit Game button actually quit the game. Made Windows, MAC, and Linux builds and posted them to Itch.io. (3 hours)
-(14 hours left to go)
+May 1st Made the WebGL build. Changed the screen height and width. Posted the WebGL build to Itch.io. (30 minutes)
